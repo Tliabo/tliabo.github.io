@@ -1,0 +1,46 @@
+.slider {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.slider .slider-inner {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.slider .slider-inner .slider-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  position: relative;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.slider .slider-inner .caption {
+  position: absolute;
+  bottom: 3rem;
+  background: #f3f3f352;
+  padding: 0.5rem;
+  border-radius: 1px;
+}
+.slider .slider-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 12.5%;
+  height: 100%;
+}
+.slider .slider-control:hover {
+  background: #BFBFBF40;
+}
+.slider .slider-control.prev {
+  left: 0;
+}
+.slider .slider-control.next {
+  right: 0;
+}
+/*# sourceMappingURL=components.css.map */

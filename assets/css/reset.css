@@ -1,0 +1,21 @@
+body {
+  box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a :visited {
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+/*# sourceMappingURL=reset.css.map */

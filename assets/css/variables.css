@@ -1,0 +1,10 @@
+/* Basic Color scheme */
+:root {
+  --color-light: #FFE3E3;
+  --bg-pink: #E1A6AD;
+  --bg-dark: #946E72;
+  --bg-dark-lighten: #aa8b8f;
+  --bg-gray: #E1E1E1;
+  --color-dark: #333333;
+}
+/*# sourceMappingURL=variables.css.map */

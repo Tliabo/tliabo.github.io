@@ -15,6 +15,7 @@ for (let i = 0; i < sliders.length; i++) {
     addIdToSlider(slider, sliderId);
     slider.setAttribute('data-slider-play', true);
     updateAutoplay(slider, sliderItems);
+    addSliderIdToControl(autoslideBtn, sliderId)
 
     for (let j = 0; j < sliderControls.length; j++) {
         let control = sliderControls[j];

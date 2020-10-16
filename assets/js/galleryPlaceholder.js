@@ -4,7 +4,7 @@
 
 let closeBtn;
 let modalContent;
-const paintingDetails = `
+let paintingDetails = `
 <div class="painting-details">
     <div class="row painting-name">
         <p>Name:</p>

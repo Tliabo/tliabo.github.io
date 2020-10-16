@@ -4,7 +4,24 @@
 
 let closeBtn;
 let modalContent;
-let paintingDetails = `
+
+
+function createPlaceholder(amount = 1, keywords, minMaxSize) {
+    for (let i = 0; i < amount; i++) {
+
+        const paintingWrapper = document.createElement('li');
+        paintingWrapper.classList.add('painting-wrapper');
+
+        const imgWrapper = document.createElement('figure');
+        imgWrapper.classList.add('img-wrapper');
+
+        const paintingImg = document.createElement('img');
+        paintingImg.classList.add('painting-img', 'img-responsive');
+        paintingImg.src = getImageLink(keywords, minMaxSize);
+        paintingImg.alt = 'Random image from unsplashed';
+
+
+        const paintingDetails = `
 <div class="painting-details">
     <div class="row painting-name">
         <p>Name:</p>
@@ -26,20 +43,6 @@ let paintingDetails = `
     </div>
 </div>
 `
-
-function createPlaceholder(amount = 1, keywords, minMaxSize) {
-    for (let i = 0; i < amount; i++) {
-
-        const paintingWrapper = document.createElement('li');
-        paintingWrapper.classList.add('painting-wrapper');
-
-        const imgWrapper = document.createElement('figure');
-        imgWrapper.classList.add('img-wrapper');
-
-        const paintingImg = document.createElement('img');
-        paintingImg.classList.add('painting-img', 'img-responsive');
-        paintingImg.src = getImageLink(keywords, minMaxSize);
-        paintingImg.alt = 'Random image from unsplashed';
 
         imgWrapper.appendChild(paintingImg);
         paintingWrapper.appendChild(imgWrapper);

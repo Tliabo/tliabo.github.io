@@ -3,7 +3,6 @@
  */
 
 const sliders = document.querySelectorAll('.slider');
-let interval;
 
 for (let i = 0; i < sliders.length; i++) {
     let slider = sliders[i];
@@ -11,10 +10,11 @@ for (let i = 0; i < sliders.length; i++) {
     let sliderItems = slider.querySelectorAll('.slider-item');
     let autoslideBtn = slider.querySelector('.autoslide');
     let sliderId = `slider-${i}`;
+    let interval;
 
     addIdToSlider(slider, sliderId);
     slider.setAttribute('data-slider-play', true);
-    updateAutoplay(slider, sliderItems);
+    updateAutoplay(slider, sliderItems, interval);
     addSliderIdToControl(autoslideBtn, sliderId)
 
     for (let j = 0; j < sliderControls.length; j++) {
@@ -27,11 +27,11 @@ for (let i = 0; i < sliders.length; i++) {
         if (slider.getAttribute('data-slider-play') === "true") {
             e.target.classList.replace('fa-pause-circle', 'fa-play-circle');
             slider.setAttribute('data-slider-play', false);
-            updateAutoplay(slider, sliderItems);
+            updateAutoplay(slider, sliderItems, interval);
         } else {
             e.target.classList.replace('fa-play-circle', 'fa-pause-circle');
             slider.setAttribute('data-slider-play', true);
-            updateAutoplay(slider, sliderItems);
+            updateAutoplay(slider, sliderItems, interval);
         }
     })
 }
@@ -96,7 +96,7 @@ function slidePrev(slider, sliderItems) {
 
 }
 
-function updateAutoplay(slider, sliderItems) {
+function updateAutoplay(slider, sliderItems, interval) {
 
     if (slider.getAttribute('data-slider-play') === "true") {
         interval = setInterval(function (){
